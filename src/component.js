@@ -43,24 +43,3 @@ export const CurrentCard = (prop) => {
   }
 };
 
-export const Flashcard = (prop) => {
-  return (
-    <div
-      className="flashcard boxsizing hvr-float-shadow"
-      onClick={prop.getCurrCard}
-    >
-      <div className="upperInfo">
-        <hr></hr>
-        <div>
-          <div className="numBox"></div>
-          <p>{prop.numCards}</p>
-        </div>
-      </div>
-      <div className="lowerInfo">
-        <h3>{prop.title}</h3>
-        <h4>created: {prop.dateCreated}</h4>
-        <h4>modified: {prop.dateModified}</h4>
-      </div>
-    </div>
-  );
-};

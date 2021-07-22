@@ -3,7 +3,7 @@ import ReactDom from "react-dom";
 import "./index.css";
 import "./animation.css";
 import { flashcards } from "./flashcards.js";
-import {HeaderTab, CurrentCard, Search, Flashcard} from "./component.js";
+import {HeaderTab, CurrentCard} from "./component.js";
 
 
 function App() {
