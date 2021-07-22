@@ -24,7 +24,7 @@ export const flashcards = [
     cards: [
       ["悪い (わるい)", "bad"],
       ["安い(やすい)", "cheap"],
-      ["暗い(くらい)"], "dark"],
+      ["暗い(くらい)", "dark"],
     ],
   },
 ];

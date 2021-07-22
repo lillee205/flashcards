@@ -9,12 +9,12 @@ import {HeaderTab, CurrentCard, Search, Flashcard} from "./component.js";
 function App() {
   return (
     <>
-        <div className="header">
-          <div id="home">flashcard</div>
-          <HeaderTab title="help" />
-          <HeaderTab title="about" />
-        </div>
-        <Cards />
+      <div className="header">
+        <div id="home">flashcard</div>
+        <HeaderTab title="help" />
+        <a href="/">{"about"}</a>
+      </div>
+      <Cards />
     </>
   );
 }
@@ -74,11 +74,41 @@ class Cards extends Component {
             <div className="plus"></div>
             <p>Add new set</p>
           </div>
-          {this.state.filteredCards.map((card, index) => {
-            return (
-              <Flashcard key={index} getCurrCard={this.getCurrCard} {...card} />
-            );
-          })}
+          
+          <div
+            className="flashcard boxsizing hvr-float-shadow"
+            onClick={this.getCurrCard}
+          >
+            <div className="upperInfo">
+              <hr></hr>
+              <div>
+                <div className="numBox"></div>
+                <p>{flashcards[0].numCards}</p>
+              </div>
+            </div>
+            <div className="lowerInfo">
+              <h3>{flashcards[0].title}</h3>
+              <h4>created: {flashcards[0].dateCreated}</h4>
+              <h4>modified: {flashcards[0].dateModified}</h4>
+            </div>
+          </div>
+          <div
+            className="flashcard boxsizing hvr-float-shadow"
+            onClick={this.getCurrCard}
+          >
+            <div className="upperInfo">
+              <hr></hr>
+              <div>
+                <div className="numBox"></div>
+                <p>{flashcards[1].numCards}</p>
+              </div>
+            </div>
+            <div className="lowerInfo">
+              <h3>{flashcards[1].title}</h3>
+              <h4>created: {flashcards[1].dateCreated}</h4>
+              <h4>modified: {flashcards[1].dateModified}</h4>
+            </div>
+          </div>
         </div>
       </>
     );
